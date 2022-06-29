@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('confirm version') {
             steps {
-                nodejs('Node18.4.0') {
+                nodejs('Nodejs 18.4.0') {
                     sh 'node -v'
                     sh 'npm -v'
                 }
@@ -11,7 +11,7 @@ pipeline {
         }
         stage('install node packages') {
             steps {
-                nodejs('Node18.4.0') { // <- use node name you configured 
+                nodejs('Nodejs 18.4.0') { // <- use node name you configured 
                 //in “Global Tool Config”.
                     sh 'npm install'
                 }
